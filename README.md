@@ -4,12 +4,6 @@ This project is a simple and user-friendly online store, designed and implemente
 
 ---
 
-## 📸 Preview
-
-![screenshot](./screenshot.png) <!-- Add a screenshot of the project in the main folder -->
-
----
-
 ## 🚀 Technologies Used
 
 - ✅ HTML5
