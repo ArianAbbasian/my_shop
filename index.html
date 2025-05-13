@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Shop</title>
+    <link href="./src/output.css" rel="stylesheet" />
+    <link href="./dist/output.css" rel="stylesheet">
+    <script src="./js/script.js" defer></script>
+  </head>
+  <body
+    class="overflow-x-hidden antialiased font-vazirmatn bg-[#111111] text-[#fafafa] relative"
+  >
+    <!-- Nav Bar -->
+    <nav class="container relative mx-auto p-6">
+      <!-- flex container for nav items -->
+      <div class="flex items-center justify-between space-x-20 my-6">
+        <!-- LOGO -->
+        <div class="flex items-center justify-center">
+          <div class="flex">
+            <img class="w-3/12" src="./images/logo.png" />
+            <span
+              class="tracking-[.15rem] pt-[.9rem] pl-2 font-bold text-lg uppercase"
+              >shopping</span
+            >
+          </div>
+        </div>
+        <!-- Menu Items -->
+        <div class="md:flex items-center hidden text-lg space-x-10">
+          <a href="#qa" class="hover:translate-y-3 duration-500"
+            >سوالات متداول</a
+          >
+          <a href="#categories" class="hover:translate-y-3 duration-500"
+            >دسته‌بندی‌ها</a
+          >
+          <a href="#product-list" class="hover:translate-y-3 duration-500"
+            >محصولات</a
+          >
+          <a
+            href="#"
+            class="px-4 border-2 py-2 rounded-lg border-[#fafafa] hover:text-[#111111] hover:bg-[#fafafa] duration-300"
+            >حساب کاربری</a
+          >
+          <a
+            href="#"
+            id="open-cart"
+            class="px-4 py-2 border-2 rounded-lg border-[#fafafa] hover:text-[#111111] hover:bg-[#fafafa] duration-300 cursor-pointer"
+          >
+            🛒 سبد خرید
+          </a>
+        </div>
+        <!-- Hamburger Button (only visible on mobile) -->
+        <div class="md:hidden z-50">
+          <button id="menu-btn" class="flex flex-col space-y-1">
+            <span class="w-6 h-0.5 bg-white block"></span>
+            <span class="w-6 h-0.5 bg-white block"></span>
+            <span class="w-6 h-0.5 bg-white block"></span>
+          </button>
+        </div>
+      </div>
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="md:hidden hidden absolute top-[100px] right-6 bg-[#1a1c1e] text-white rounded-lg shadow-lg p-6 space-y-4 z-40"
+      >
+        <a href="#qa" class="block">سوالات متداول</a>
+        <a href="#categories" class="block">دسته‌بندی‌ها</a>
+        <a href="#product-list" class="block">محصولات</a>
+        <a href="#" class="block">حساب کاربری</a>
+        <a href="#" id="open-cart" class="block">🛒 سبد خرید</a>
+      </div>
+    </nav>
+
+    <!-- intro -->
+    <section
+      class="container flex flex-col justify-between mx-auto h-screen p-6 lg:flex-row lg:mb-0 mb-[200px]"
+    >
+      <!-- image -->
+      <div class="lg:w-1/2 mx-auto lg:mx-0 lg:mb-0">
+        <img src="./images/shure-intro.png" class="rounded-xl xl:top-0" />
+      </div>
+      <!-- Content -->
+      <div class="lg:w-1/2 flex flex-col space-y-10 text-right lg:mt-16 mb-20">
+        <h1 class="lg:text-6xl font-semibold text-3xl mt-5">
+          بررسی و خرید آنلاین
+        </h1>
+        <p class="text-lg lg:text-2xl text-gray-300 lg:mt-0">
+          یک خرید اینترنتی مطمئن، نیازمند فروشگاهی است که بتواند کالاهایی متنوع،
+          باکیفیت و دارای قیمت مناسب را در مدت زمان کوتاه به دست مشتریان خود
+          برساند و ضمانت بازگشت کالا هم داشته باشد
+        </p>
+        <!-- Container Buttons -->
+        <div class="flex justify-end space-x-4 w-full">
+          <a
+            href="#"
+            class="p-4 text-lg rounded-lg border-2 hover:bg-[#fafafa] hover:text-black duration-300"
+            >بررسی و خرید</a
+          >
+          <a
+            href="#"
+            class="p-4 text-lg rounded-lg bg-[#fafafa] text-black border-2"
+            >مشاهده محصولات</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- product Heading -->
+    <section id="product-list">
+      <div class="container mx-auto px-6">
+        <h2 class="mb-6 text-center text-3xl font-semibold">آخرین محصولات</h2>
+        <p class="max-w-lg mx-auto text-center">
+          تنوع بهترین برند های میکروفون و هدفون
+        </p>
+      </div>
+    </section>
+
+    <!-- Products -->
+    <section class="py-32">
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 max-w-7xl mx-auto gap-4"
+      >
+        <!-- product #1 -->
+        <div class="flex flex-col w-full text-center rounded-lg bg-[#1a1c1e]">
+          <!-- image -->
+          <div class="flex justify-center">
+            <img class="rounded-t-lg" src="./images/beats.png" />
+          </div>
+          <!-- text -->
+          <h5 class="pt-5 mb-2 text-2xl font-bold">Beats</h5>
+          <div class="flex justify-center gap-1 text-gray-300 text-lg">
+            <p>تومان</p>
+            <p>۱.۰۰۰.۰۰۰</p>
+          </div>
+          <div class="px-6 pt-8 mb-8">
+            <a
+              href="#"
+              class="add-to-cart py-3 px-4 text-white bg-[#343434] text-sm rounded-lg hover:bg-[#fafafa] hover:text-black duration-500"
+              data-title="Beats"
+              data-price="1000000"
+              data-id="1111"
+              >افزودن به سبد خرید</a
+            >
+          </div>
+        </div>
+        <!-- product #2 -->
+        <div class="flex flex-col w-full text-center rounded-lg bg-[#1a1c1e]">
+          <!-- image -->
+          <div class="flex justify-center">
+            <img class="rounded-t-lg" src="./images/airpods-max.png" />
+          </div>
+          <!-- text -->
+          <h5 class="pt-5 mb-2 text-2xl font-bold">Airpods Max</h5>
+          <div class="flex justify-center gap-1 text-gray-300 text-lg">
+            <p>تومان</p>
+            <p>۲,۵۰۰,۰۰۰</p>
+          </div>
+          <div class="px-6 pt-8 mb-8">
+            <a
+              href="#"
+              class="add-to-cart py-3 px-4 text-white bg-[#343434] text-md rounded-lg hover:bg-[#fafafa] hover:text-black duration-5000"
+              data-title="Airpods Max"
+              data-price="2500000"
+              data-id="2222"
+              >افزودن به سبد خرید</a
+            >
+          </div>
+        </div>
+        <!-- product #3 -->
+        <div class="flex flex-col w-full text-center rounded-lg bg-[#1a1c1e]">
+          <!-- image -->
+          <div class="flex justify-center">
+            <img class="rounded-t-lg" src="./images/rode.png" />
+          </div>
+          <!-- text -->
+          <h5 class="pt-5 mb-2 text-2xl font-bold">Rode</h5>
+          <div class="flex justify-center gap-1 text-gray-300 text-lg">
+            <p>تومان</p>
+            <p>۸,۰۰۰,۰۰۰</p>
+          </div>
+          <div class="px-6 pt-8 mb-8">
+            <a
+              href="#"
+              class="add-to-cart py-3 px-4 text-white bg-[#343434] text-sm rounded-lg hover:bg-[#fafafa] hover:text-black duration-5000"
+              data-title="Rode"
+              data-price="8000000"
+              data-id="3333"
+              >افزودن به سبد خرید</a
+            >
+          </div>
+        </div>
+        <!-- product #4 -->
+        <div class="flex flex-col w-full text-center rounded-lg bg-[#1a1c1e]">
+          <!-- image -->
+          <div class="flex justify-center">
+            <img class="rounded-t-lg" src="./images/shure.png" />
+          </div>
+          <!-- text -->
+          <h5 class="pt-5 mb-2 text-2xl font-bold">Shure</h5>
+          <div class="flex justify-center gap-1 text-gray-300 text-lg">
+            <p>تومان</p>
+            <p>۴,۰۰۰,۰۰۰</p>
+          </div>
+          <div class="px-6 pt-8 mb-8">
+            <a
+              href="#"
+              class="add-to-cart py-3 px-4 text-white bg-[#343434] text-sm rounded-lg hover:bg-[#fafafa] hover:text-black duration-5000"
+              data-title="Shure"
+              data-price="4000000"
+              data-id="4444"
+              >افزودن به سبد خرید</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categories -->
+    <section id="categories">
+      <div class="mx-auto mt-16 px-6 text-center">
+        <h2 class="mb-6 text-3xl font-semibold">دسته‌بندی‌ها</h2>
+        <p class="max-w-md mx-auto">تجهیزات به روز استدیویی</p>
+      </div>
+    </section>
+
+    <!-- categories tabs -->
+    <section>
+      <!-- tabs container -->
+      <div class="container mx-auto my-6 mb-32 mt-12 px-6">
+        <!-- Flex Container -->
+        <div
+          class="flex flex-col justify-center max-w-xl mx-auto mb-6 md:space-x-10 md:flex-row-reverse"
+        >
+          <!-- tab 1 -->
+          <div
+            class="flex justify-center text-center cursor-pointer md:w-1/3 tab"
+            data-target="panel-1"
+          >
+            <div class="py-5 border-gray-400" data-target="panel-1">هدفون</div>
+          </div>
+
+          <!-- tab 2 -->
+          <div
+            class="flex justify-center text-center cursor-pointer md:w-1/3 tab border-gray-400 border-b-4"
+            data-target="panel-2"
+          >
+            <div class="py-5 border-gray-400" data-target="panel-2">
+              میکروفون
+            </div>
+          </div>
+
+          <!-- tab 3 -->
+          <div
+            class="flex justify-center text-center cursor-pointer md:w-1/3 tab"
+            data-target="panel-3"
+          >
+            <div class="py-5 border-gray-400" data-target="panel-3">
+              تجهیزات جانبی
+            </div>
+          </div>
+        </div>
+        <!-- tab panels -->
+        <div id="panels" class="container mx-auto">
+          <!-- panel 1 -->
+          <div
+            class="flex flex-col py-5 md:flex-row-reverse md:space-x-7 panel panel-1 hidden"
+          >
+            <!-- panel image -->
+            <div class="flex justify-center md:w-1/2">
+              <img
+                src="./images/headphone.png"
+                class="relative w-2/3 rounded-lg"
+              />
+            </div>
+            <!-- panel content -->
+            <div class="flex flex-col space-y-8 md:w-1/3">
+              <h3
+                class="mt-32 text-3xl font-semibold text-center md:mt-0 md:text-right"
+              >
+                هدفون
+              </h3>
+              <p class="text-center md:text-right">
+                مثل تمام بلندگوها، هدفون نیز سیگنال الکترونیکی را به سیگنال
+                آنالوگ تبدیل می‌کند. از هدفون‌ها برای پخش موسیقی، برقراری تماس
+                تلفنی و فراخوانی دستیارهای شخصی همچون Siri استفاده می‌شود. برخی
+                از هدفون‌ها نیز قابلیت حذف نویز و صداهای ناخواسته یا تقویت برخی
+                دیگر از صداها را دارند. هدفون‌ها برخلاف بلندگوها، به گونه‌ای
+                طراحی شده‌اند که تنها کاربر می‌تواند به صدا گوش فرا دهد
+              </p>
+              <div class="mx-auto md:mx-0 text-right">
+                <a
+                  href="#"
+                  class="px-6 py-3 mt-4 border-2 border-[#fafafa] rounded-lg md:inline-flex hover:bg-white hover:text-black hover:border-2 duration-300"
+                  >بیشتر</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- panel 2 -->
+          <div
+            class="flex flex-col py-5 md:flex-row-reverse md:space-x-7 panel panel-2"
+          >
+            <!-- panel image -->
+            <div class="flex justify-center md:w-1/2">
+              <img src="./images/mic.png" class="relative w-2/3 rounded-lg" />
+            </div>
+            <!-- panel content -->
+            <div class="flex flex-col space-y-8 md:w-1/3">
+              <h3
+                class="mt-32 text-3xl font-semibold text-center md:mt-0 md:text-right"
+              >
+                میکروفون
+              </h3>
+              <p class="text-center md:text-right">
+                میکروفون‌های USB یکی از پیشرفت‌های جدید در فناوری میکروفون هستند
+                و دارای تمام اجزای میکروفون‌های سنتی می‌باشند: کپسول، دیافراگم و
+                غیره. تفاوت این میکروفون در داشتن دو مدار اضافی است: یک پری
+                آمپلی فایر داخلی و یک مبدل آنالوگ به دیجیتال (A/D). پری آمپلی
+                فایر اتصال میکروفون به میکسر یا پری آمپلی فایر میکروفون خارجی را
+                غیرضروری می‌سازد
+              </p>
+              <div class="mx-auto md:mx-0 text-right">
+                <a
+                  href="#"
+                  class="px-6 py-3 mt-4 border-2 border-[#fafafa] rounded-lg md:inline-flex hover:bg-white hover:text-black hover:border-2 duration-300"
+                  >بیشتر</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- panel 3 -->
+          <div
+            class="flex flex-col py-5 md:flex-row-reverse md:space-x-7 panel panel-3 hidden"
+          >
+            <!-- panel image -->
+            <div class="flex justify-center md:w-1/2">
+              <img src="./images/stand.png" class="relative w-2/3 rounded-lg" />
+            </div>
+            <!-- panel content -->
+            <div class="flex flex-col space-y-8 md:w-1/3">
+              <h3
+                class="mt-32 text-3xl font-semibold text-center md:mt-0 md:text-right"
+              >
+                تجهیزات جانبی
+              </h3>
+              <p class="text-center md:text-right">
+                ارتفاع این پایه براحتی قابل تنظیم است و به دلیل نوع ساختار آن و
+                طراحی خاصِ بدنه در هر کجا که رها شود در همان جا فیکس باقی می
+                ماند و همچنین قابلیت چرخش 360 درجه ای بدور خود را دارد. از این
+                پایه بیشتر در استودیوهای دوبلاژ و برادکست استفاده می شود
+              </p>
+              <div class="mx-auto md:mx-0 text-right">
+                <a
+                  href="#"
+                  class="px-6 py-3 mt-4 border-2 border-[#fafafa] rounded-lg md:inline-flex hover:bg-white hover:text-black hover:border-2 duration-300"
+                  >بیشتر</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- accordion heading -->
+    <section id="qa">
+      <div class="container mx-auto">
+        <h2 class="mb-6 text-3xl font-semibold text-center">سوالات متداول</h2>
+      </div>
+    </section>
+
+    <!-- accordion -->
+    <section>
+      <!-- main container -->
+      <div class="container mx-auto px-6 mb-32">
+        <!-- accordion container -->
+        <div class="max-w-2xl m-8 mx-auto overflow-hidden">
+          <!-- tab 1 -->
+          <div class="py-1 border-b outline-none group" tabindex="1">
+            <!-- tab flex container -->
+            <div
+              class="flex items-center justify-between py-3 transition duration-500 cursor-pointer group ease"
+            >
+              <!-- arrow -->
+              <div class="transition duration-500 ease group-focus:-rotate-180">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12">
+                  <path
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="3"
+                    d="M1 1l8 8 8-8"
+                  ></path>
+                </svg>
+              </div>
+              <!-- tab title -->
+              <div class="text-xl">چطور می‌توانم سفارشم را پیگیری کنم؟</div>
+            </div>
+
+            <!-- tab inner content -->
+            <div
+              class="overflow-hidden transition duration-500 group-focus:max-h-screen max-h-0 ease"
+            >
+              <p class="py-2 text-lg text-right text-gray-200">
+                وارد سایت شوید. روی گزینه سفارش‌های من کلیک کنید. در این قسمت با
+                کلیک روی جزییات می‌توانید سفارش خود را ببینید. می‌توانید در این
+                قسمت روند آماده‌سازی و مراحل ارسال سفارش خود را پیگیری کنید
+              </p>
+            </div>
+          </div>
+
+          <!-- tab 2 -->
+          <div class="py-1 border-b outline-none group" tabindex="2">
+            <!-- tab flex container -->
+            <div
+              class="flex items-center justify-between py-3 transition duration-500 cursor-pointer group ease"
+            >
+              <!-- arrow -->
+              <div class="transition duration-500 ease group-focus:-rotate-180">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12">
+                  <path
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="3"
+                    d="M1 1l8 8 8-8"
+                  ></path>
+                </svg>
+              </div>
+              <!-- tab title -->
+              <div class="text-xl">چطور میتوانم سفارشم را لغو کنم ؟</div>
+            </div>
+
+            <!-- tab inner content -->
+            <div
+              class="overflow-hidden transition duration-500 group-focus:max-h-screen max-h-0 ease"
+            >
+              <p class="py-2 text-lg text-right text-gray-200">
+                شما میتوانید با مراجعه به پروفایل خود سفارش یا مرسوله ایی که از
+                ارسال آن منصرف شدید را لغو نمایید. میتوانید برای مشاهده روند لغو
+                سفارش به توضیحات تکمیلی مراجعه کنید
+              </p>
+            </div>
+          </div>
+
+          <!-- tab 3 -->
+          <div class="py-1 border-b outline-none group" tabindex="3">
+            <!-- tab flex container -->
+            <div
+              class="flex items-center justify-between py-3 transition duration-500 cursor-pointer group ease"
+            >
+              <!-- arrow -->
+              <div class="transition duration-500 ease group-focus:-rotate-180">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12">
+                  <path
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="3"
+                    d="M1 1l8 8 8-8"
+                  ></path>
+                </svg>
+              </div>
+              <!-- tab title -->
+              <div class="text-xl">
+                چطور درخواست خود را جهت بازگرداندن کالا اطلاع دهم؟
+              </div>
+            </div>
+
+            <!-- tab inner content -->
+            <div
+              class="overflow-hidden transition duration-500 group-focus:max-h-screen max-h-0 ease"
+            >
+              <p class="py-2 text-lg text-right text-gray-200">
+                شما میتوانید از طریق فرم درخواست مرجوعی در حساب کاربری ، صفحه
+                تماس با ما و تلفن درخواست خود را ثبت نمایید
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- newsletter -->
+    <section class="bg-[#1b1b1b]">
+      <!-- main container -->
+      <div class="max-w-lg mx-auto py-24">
+        <h2
+          class="px-3 mb-6 text-3xl font-semibold text-center text-white md:text-4xl"
+        >
+          آخرین اخبار سایت
+        </h2>
+        <p class="max-w-lg mx-auto mb-8 text-center">
+          برای اشتراک در خبرنامه لطفا ایمیل خود را وارد کنید
+        </p>
+        <!-- form -->
+        <form
+          class="flex flex-col items-start justify-center max-w-2xl mx-auto space-y-6 px-6 md:flex-row md:space-y-0 md:space-x-4 md:px-0"
+        >
+          <!-- input and button -->
+          <div
+            class="flex flex-col justify-between items-center mx-auto md:flex-row md:mx-0"
+          >
+            <input
+              type="submit"
+              class="inline-flex px-6 py-2 mr-2 rounded-lg border-2 hover:bg-[#fafafa] hover:text-black cursor-pointer focus:outline-none duration-500"
+              value="ارسال"
+            />
+            <input
+              type="text"
+              class="flex-1 px-6 pt-3 pb-2 mb-4 rounded-lg text-black focus:outline-none md:mr-3 md:mb-0"
+              placeholder="آدرس ایمیل"
+            />
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- cart Modal -->
+
+    <div
+      id="cart-modal"
+      class="inset-0 z-50 hidden bg-black/50 backdrop-blur-sm flex fixed bottom-0 left-0 overflow-hidden"
+    >
+      <div
+        class="relative w-[90%] max-w-md bg-[#1a1c1e] text-white p-6 rounded-xl shadow-2xl"
+      >
+        <!-- close button -->
+        <button
+          id="close-cart"
+          class="absolute top-3 left-4 text-3xl font-bold text-gray-400 hover:text-white transition"
+        >
+          &times;
+        </button>
+
+        <h2 class="text-2xl font-semibold text-center mb-6">🛒 سبد خرید</h2>
+
+        <!-- cart content -->
+        <div id="cart-items" class="space-y-4 overflow-y-auto"></div>
+
+        <!-- total Price -->
+        <div class="mt-auto border-t border-gray-700 pt-4 text-right">
+          <span id="total-price" class="text-lg font-bold"></span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
